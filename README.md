@@ -11,5 +11,5 @@
 
 <br>
 
-# localStorage_JSON_sample
+### localStorage_JSON_sample
 １つのキーに対して複数のデータを保存したいとき、<br>データをJSON形式に変換してローカルストレージへ保存するサンプルコード
