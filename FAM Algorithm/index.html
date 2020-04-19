@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>性格分析 | FAM Algorithm</title>
+<!-- <meta name="viewport" content="width=767, initial-scale=1"> -->
+<meta name="google-site-verification" content="grALsSmpgtk3SfBQ77D5MLby4Oo6gkBg6KhYtH-rsFw" />
+<link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="webclip152.png"/>
+</head>
+<body>
+<!-- wrapper -->
+<div id="wrapper">
+
+  <!-- ヘッダー固定 -->
+  <div id="headerFixed">
+    <div id="headerWall">
+      <!-- ヘッダー -->
+      <header>
+          <h1><a href="index.html"><img src="images/logo.jpg" alt="ロゴ"></a></h1>
+          <nav id="global_navi">
+            <ul>
+              <li class="current"><a href="index.html">HOME</a></li>
+              <li><a href="dictionary.html">Dictinary</a></li>
+              <li><a href="log.html">My Log</a></li>
+            </ul>
+          </nav>
+          <!-- トピックリスト -->
+          <div id="topic_list">
+            <ol>
+              <li><a href="index.html">HOME</a></li>
+            </ol>
+          </div>
+          <!-- /トピックリスト -->
+      </header>
+      <!-- /ヘッダー -->
+    </div>
+  </div>
+  <!-- /ヘッダー固定 -->
+
+    <!-- メイン -->
+    <div id="main">
+      <article>
+        <div class="wall">
+          <div class="wall_mask">
+            <h1>HOME</h1>
+          </div>
+        </div>
+        <section id="sectionHome">
+          <p class="lead">FAMアルゴリズム | 生年月日を基に性格分析</p>
+          <ul id="ulIndex">
+            <!-- <li>生年月日と先天的な性格の間には, 相関関係あることを表した統計データを参考にしています。</li>
+            <li>暦は周期的な天体の配置に基づくので, この固有周期と統計データとを組み合わせたアルゴリズムから, 人物の性格を分析します。</li> -->
+            <li>生年月日と先天的な性格傾向との間には, 周期的な関係があることを示した統計データを参考に, 生年月日から性格を分析するアルゴリズムを作成しました。</li>
+            <li>FAMタイプの解説は「 Dictionary 」に記載されています。</li>
+            <li>分析結果を記録すると「 My Log 」から参照できます。</li>
+          </ul>
+          <p class="ps">※1582年10月15日以前にはユリウス暦が使用されていたので,
+            このアルゴリズムでは現行のグレゴリオ暦に変換することで,
+            昔の偉人を分析することも可能です。</p>
+          <p class="ps">※当サイトは, 趣味で製作したWEBアプリです。</p>
+        </section>
+        <section>
+          <h2>FAM - ALGORITHM</h2>
+          <section>
+            <h3>分析する人の生年月日を入力</h3>
+          </section>
+        </section>
+        <div id="formBirthday">
+          <select id="year"><option value="0">----</option></select>
+          <nobr class="unit">年</nobr>
+          <select id="month"><option value="0">--</option></select>
+          <nobr class="unit">月</nobr>
+          <select id="day"><option value="0">--</option></select>
+          <nobr class="unit">日</nobr>​
+          <div id="areaBtnAnalys">
+            <button id="btnAnalys">分析スタート</button>
+          </div>
+        </div>
+      </article>
+      <h2>FAM - COMPASS</h2>
+      <div id="compass"></div>
+      <article id="articleAnalys">
+        <h2>Result of Analysis</h2>
+        <section id="sectionConvert">
+          <h3>入力された生年月日</h3>
+          <p id="txtJulian"></p>
+          <p id="txtGregorian"></p>
+        </section>
+          <h3 id="titleType">FAMタイプ</h3>
+          <div id="areaBtnVarious">
+            <button id="btnResult">性格分析</button>
+            <button id="btnCeleb">著名人</button>
+            <button id="btnLegend">偉人</button>
+          </div>
+          <section class="sectionTable">
+            <section id="sectionResult">
+              <p id="titleResult">性格分析</p>
+              <table id="tableResult"></table>
+            </section>
+          </section>
+          <section class="sectionTable">
+            <section id="sectionCeleb">
+              <p id="titleCeleb">著名人</p>
+              <table id="tableCeleb">
+                <!-- <tr>
+                  <th class="tableId">ID</th>
+                  <th class="tableName">Name</th>
+                  <th class="tableBirth">Birthday</th>
+                </tr> -->
+              </table>
+            </section>
+          </section>
+          <section class="sectionTable">
+            <section id="sectionLegend">
+              <p id="titleLegend">偉人</p>
+              <table id="tableLegend">
+              </table>
+            </section>
+          </section>
+        <h3>分析結果を保存</h3>
+        <img id="iconSave" src="images/save.png" alt="save_icon">
+        <!-- <div><button id="btnAdd">SAVE LOG</button></div> -->
+        <section id='sectionSave'>
+          <p id="titleSave">人物名を入力</p>
+          <form name="formName">
+            <input type="text" class="inputName"></input>
+          </form>
+          <div id="areaBtnSave">
+            <button id="btnSave">SAVE</button>
+            <button id="btnReset">RESET</button>
+          </div>
+          <section id="sectionSaveNotify">
+            <p id="titleSaveNotify">保存されたログデータ</p>
+            <div>
+              <p id="txtSaveId"><p>
+              <p id="txtSaveName"><p>
+              <p id="txtSaveBirth"><p>
+              <p id="txtSaveType"><p>
+              <p id="txtSave"><p>
+            </div>
+          </section>
+        </section>
+      </article>
+      <section>
+        <div id="areaBtnReload">
+          <button id="btnReload">RELOAD</button>
+        </div>
+      </section>
+    </div>
+    <!-- /メイン -->
+
+  <!-- フッター -->
+  <footer>
+    <div id="footer_nav">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="dictionary.html">Dictionary</a></li>
+        <li><a href="log.html">My Log</a></li>
+      </ul>
+    </div>
+    <small>&copy; 2019 Tatsujin16</small>
+  </footer>
+  <!--/フッター-->
+</div>
+<!-- /wrapper -->
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
