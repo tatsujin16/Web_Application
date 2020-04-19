@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>My Log | FAM Algorithm</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- wrapper -->
+  <div id="wrapper">
+
+    <!-- ヘッダー固定 -->
+    <div id="headerFixed">
+      <div id="headerWall">
+        <!-- ヘッダー -->
+        <header>
+          <h1><a href="index.html"><img src="images/logo.jpg" alt="ロゴ"></a></h1>
+          <nav id="global_navi">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="dictionary.html">Dictionary</a></li>
+              <li class="current"><a href="log.html">My Log</a></li>
+            </ul>
+          </nav>
+          <!-- トピックリスト -->
+          <div id="topic_list">
+            <ol>
+              <li><a href="index.html">HOME</a></li>
+              <li>My Log</li>
+            </ol>
+          </div>
+          <!-- /トピックリスト -->
+        </header>
+        <!-- /ヘッダー -->
+      </div>
+    </div>
+    <!-- /ヘッダー固定 -->
+
+    <!-- メイン -->
+    <div id="main">
+      <article>
+        <div class="wall">
+          <div class="wall_mask">
+            <h1>My Log</h1>
+          </div>
+        </div>
+        <p class="lead">分析データの記録「 表示・追加・編集 」</p>
+        <dl id='dlLog'>
+          <dt>LIST</dt>
+          <dd>今まで記録したログを一覧表示</dd>
+          <dt>ADD</dt>
+          <dd>人物名と生年月日を入力してログの追加</dd>
+          <dt>EDIT</dt>
+          <dd>ログの編集
+            <ul id='ulLog'>
+              <li>検索アイコン : IDを選択して検索</li>
+              <li>DEL ボタン : IDを選択して削除</li>
+              <li>CLEAR ボタン : ログの全削除</li>
+            </ul>
+          </dd>
+        </dl>
+      </article>
+      <div id="compass" hidden></div>
+      <article id='articleLog'>
+        <!-- My Log List -->
+        <div id="areaControlPanel">
+          <p id="titleControlPanel">My Log - Control Panel</p>
+          <button id="btnLogList">LIST ≡</button>
+          <button id="btnLogAdd">ADD＋</button>
+          <button id="btnLogEdit">EDIT >></button>
+        </div>
+        <section class="sectionTable">
+          <section id="sectionLogList">
+            <p id="titleLogList">「My Log」の一覧表示</p>
+            <table id="tableLogList"></table>
+            <p id="txtLogList"></p>
+          </section>
+        </section>
+        <!-- Add Log -->
+        <section id='sectionLogAdd'>
+          <p id="titleLogAdd">「 My Log 」へ追加</p>
+          <h3>名前を入力</h3>
+          <form name="formName">
+            <input type="text" class="inputName"></input>
+          </form>
+          <h3>生年月日を入力</h3>
+          <form name="formBirthday">
+            <div id="formBirthday">
+              <select id="year"><option value="0">----</option></select>
+              <nobr class="unit">年</nobr>
+              <select id="month"><option value="0">--</option></select>
+              <nobr class="unit">月</nobr>
+              <select id="day"><option value="0">--</option></select>
+              <nobr class="unit">日</nobr>​
+            </div>
+          </form>
+          <h3>保存・入力のリセット</h3>
+          <div id="areaBtnSave">
+            <button id="btnLogSave">SAVE</button>
+            <button id="btnLogReset">RESET</button>
+          </div>
+          <section id="sectionAddNotify">
+            <h3>追加されたログデータ</h3>
+            <div>
+              <p id="txtAddId"><p>
+              <p id="txtAddName"><p>
+              <p id="txtAddBirth"><p>
+              <p id="txtAddType"><p>
+            </div>
+            <p id="txtAdd"><p>
+          </section>
+        </section>
+        <!-- Edit Log -->
+        <section id="sectionLogEdit">
+          <p id="titleLogEdit">「My Log」の編集</p>
+          <h3>ID選択・検索</h3>
+          <div>
+            <select class="inputId"><option value="0">--</option></select>
+            <!-- <button id="btnLogSearch">SEARCH</button> -->
+            <img id="imgSearch" src="images/search.png" alt="search">
+          </div>
+          <h3>削除・全削除</h3>
+          <div>
+            <button id="btnLogRemove">DEL</button>
+            <button id="btnLogClear">CLEAR</button>
+          </div>
+          <section id="sectionEditNotify">
+            <h3 id="titleEditNotify"></h3>
+            <div id="areaSearch">
+              <p id="txtSearchId"><p>
+              <p id="txtSearchName"><p>
+              <p id="txtSearchBirth"><p>
+              <p id="txtSearchType"><p>
+            </div>
+            <div id="areaRemove">
+              <p id="txtRemoveId"><p>
+              <p id="txtRemoveName"><p>
+              <p id="txtRemoveBirth"><p>
+              <p id="txtRemoveType"><p>
+            </div>
+          </section>
+          <p id="txtEdit"><p>
+        </section>
+        <!-- /Edit Log -->
+      </article>
+      <div id="areaBtnReload">
+        <button id="btnReload">RELOAD</button>
+      </div>
+    </div>
+    <!-- /メイン -->
+
+  <!-- フッター -->
+  <footer>
+    <div id="footer_nav">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="dictionary.html">Dictionary</a></li>
+        <li><a href="log.html">My Log</a></li>
+      </ul>
+    </div>
+    <small>&copy; 2019 Tatsujin16</small>
+  </footer>
+  <!--/フッター-->
+</div>
+<!-- /wrapper -->
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
