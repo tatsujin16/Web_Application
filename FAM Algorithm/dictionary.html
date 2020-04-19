@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Dictionary | FAM Algorithm</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- wrapper -->
+<div id="wrapper">
+
+  <!-- ヘッダー固定 -->
+  <div id="headerFixed">
+    <div id="headerWall">
+      <!-- ヘッダー -->
+      <header>
+        <h1><a href="index.html"><img src="images/logo.jpg" alt="ロゴ"></a></h1>
+        <nav id="global_navi">
+          <ul>
+            <li ><a href="index.html">HOME</a></li>
+            <li class="current"><a href="dictionary.html">Dictionary</a></li>
+            <li><a href="log.html">My Log</a></li>
+          </ul>
+        </nav>
+        <!-- トピックリスト -->
+        <div id="topic_list">
+          <ol>
+            <li><a href="index.html">HOME</a></li>
+            <li>Dictionary</li>
+          </ol>
+        </div>
+        <!-- /トピックリスト -->
+      </header>
+      <!-- /ヘッダー -->
+    </div>
+  </div>
+  <!-- /ヘッダー固定 -->
+
+    <!-- メイン -->
+    <div id="main">
+      <article>
+        <div class="wall">
+          <div class="wall_mask">
+            <h1>Dictionary</h1>
+          </div>
+        </div>
+        <p class="lead">FAMタイプの解説辞書</p>
+        <ul id="ulDictionary">
+          <li>FAMの意味は, 「 Fealing・Active・Mind 」の頭文字で, <br>それぞれ「感覚派・行動派・思考派」を表す基本３分類です。</li>
+          <li>その基本３分類に優先順位をつけた組み合わせが６種類で, <br>さらに「主観型・客観型」の２種に分かれるので, <br>FAMタイプは全12種のタイプに分類されます。</li>
+          <li>辞書アイコンをタップすると, FAM図式が表示されます。</li>
+          <li>タイプの数字を選択しボタンを押すと, 解説が表示されます。</li>
+        </ul>
+        <section>
+          <h2>FAM - DICTIONARY</h2>
+          <h3>FAMタイプの数字を選択</h3>
+        </section>
+        <div id="areaDictionary">
+          <img id="imgDictionary" src="images/dictionary.png" alt="dictionary">
+          <select class="inputType"><option value="0">--</option></select>
+          <button id="btnInterpret">タイプ解説</button>
+        </div>
+      </article>
+      <div id="compass" hidden></div>
+      <section id="sectionDiagram">
+        <h2>FAM - DIAGRAM</h2>
+        <h3>FAM図式</h3>
+        <ul id="ulDiagram">
+          <!-- <p id="txtDiagram">「 図式より, 視覚的に各タイプの分類を読み取る方法 」</p> -->
+          <li>F・A・M の３区分のうち, 属している区分は, 第１優先の価値感</li>
+          <li>F・A・M の３区分のうち, 属していない他の２区分の位置より, <br>隣の区分 : 第２優先, 隣でない区分 : 第３優先の価値観</li>
+          <li>奇数・偶数で分かれる内外の円環は, 主観型・客観型に分類</li>
+          <p id="psDiagram">※タイプ F1 の例 : 優先順位は F (感覚), M (思考), A (行動) の順で, 主観型</p>
+        </ul>
+        <img id="diagram" src="images/diagram.png" alt="diagram">
+      </section>
+      <article id="articleInterpret">
+          <h2 id="titleType">FAMタイプ</h2>
+          <div id="areaBtnVarious">
+            <button id="btnDicResult">性格分析</button>
+            <button id="btnDicCeleb">著名人</button>
+            <button id="btnDicLegend">偉人</button>
+          </div>
+          <section class="sectionTable">
+            <section id="sectionResult">
+              <p id="titleResult">性格分析</p>
+              <table id="tableResult"></table>
+            </section>
+          </section>
+          <section class="sectionTable">
+            <section id="sectionCeleb">
+              <p id="titleCeleb">著名人</p>
+              <table id="tableCeleb"></table>
+            </section>
+          </section>
+          <section class="sectionTable">
+            <section id="sectionLegend">
+              <p id="titleLegend">偉人</p>
+              <table id="tableLegend"></table>
+            </section>
+          </section>
+      </article>
+      <div id="areaBtnReload">
+        <button id="btnReload">RELOAD</button>
+      </div>
+    </div>
+    <!-- /メイン -->
+
+  <!-- フッター -->
+  <footer>
+    <div id="footer_nav">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="dictionary.html">Dictionary</a></li>
+        <li><a href="log.html">My Log</a></li>
+      </ul>
+    </div>
+    <small>&copy; 2019 Tatsujin16</small>
+  </footer>
+  <!--/フッター-->
+</div>
+<!-- /wrapper -->
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
